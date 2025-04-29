@@ -1,0 +1,36 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    "start": "tsc -b && node ./dist/app.js",
+    "start:worker": "tsc -b && node ./dist/worker.js",
+    "start:workerOLM": "tsc -b && node ./dist/WorkerwithHuggingFace.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@huggingface/inference": "^2.8.1",
+    "@langchain/community": "^0.3.41",
+    "@langchain/core": "^0.3.47",
+    "@langchain/openai": "^0.5.6",
+    "@langchain/qdrant": "^0.1.2",
+    "@qdrant/js-client-rest": "^1.14.0",
+    "bullmq": "^5.49.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.5.0",
+    "express": "^5.1.0",
+    "ioredis": "^5.6.1",
+    "langchain": "^0.3.24",
+    "multer": "^1.4.5-lts.2",
+    "node-fetch": "^3.3.2",
+    "nodemon": "^3.1.9",
+    "pdf-parse": "^1.1.1"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.17",
+    "@types/express": "^5.0.1",
+    "@types/multer": "^1.4.12"
+  }
+}
