@@ -54,7 +54,7 @@ The application follows a RAG (Retrieval-Augmented Generation) architecture:
 ## 🔍 System Architecture
 
 <div align="center">
-  <img src="https://drive.google.com/uc?export=view&id=YOUR_ARCHITECTURE_DIAGRAM_ID" alt="RAG Architecture Diagram" width="90%" />
+ <img src="SystemDesign.png" alt="Main Q&A Interface" width="90%" />
 </div>
 
 ## 💻 Code Examples
