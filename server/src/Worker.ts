@@ -37,7 +37,7 @@ const worker = new Worker(
     // const client = new QdrantClient({ url: 'http://localhost:6333' });
     const embedding = new OpenAIEmbeddings({
         model:'text-embedding-3-small',
-        apiKey: process.env.OPEN_AI_API_KEY || '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'
+        apiKey: process.env.OPEN_AI_API_KEY
      })
 
      const vectorStore = await QdrantVectorStore.fromExistingCollection(
