@@ -118,6 +118,36 @@ git clone [repository-url]
 # Install dependencies
 npm install
 ```
+### Configuration
+
+Create a `.env` file in both the client and server directories:
+
+```env
+# Server .env
+OPENAI_API_KEY=your_openai_api_key
+QDRANT_URL=your_qdrant_instance_url
+REDIS_URL=your_redis_instance_url
+CLERK_SECRET_KEY=your_clerk_secret_key
+
+# Client .env
+NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=your_clerk_publishable_key
+```
+
+### Running with Docker
+
+The server directory contains a `docker-compose.yml` file that sets up the  backend infrastructure:
+
+```bash
+# Navigate to server directory
+cd server
+
+# Start all services using Docker Compose
+docker-compose up -d
+```
+
+This will start:
+- Qdrant vector database
+- Redis for caching and queue management
 
 ### Running the Application
 
