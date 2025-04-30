@@ -21,19 +21,15 @@ const ChatComponent: React.FC = () => {
     setIsTyping(true);
 
     try {
-     //   const response = await fetch('http://localhost:8000/api/chat', {
-    //     method: 'POST',
-    //     headers: {
-    //       'Content-Type': 'application/json',
-    //     },
-    //     body: JSON.stringify({ question: input }),
-    // });  
+       const response = await fetch('http://localhost:8000/api/chat', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ question: input }),
+    });  
     
-    // const data = await response.json();
-    // console.log("response form b =============", data);
-      const data = {
-        answer: "Middleware is a functions that execute during the request-response cycle. Middleware can perform tasks such as logging, authentication, and error handling before sending the final response."
-    };
+    const data = await response.json();
     
       const ragMessage: Message = { sender: 'rag', text: data.answer };
       setMessages(prev => [...prev, ragMessage]); 
